@@ -30,8 +30,8 @@
                 View + Download Items
             </a>
         </div>
-        <div v-if="processId" class="fixed bottom-0 w-full py-2.5 bg-purple text-white text-center">
-            <p class="font-bold">Your process ID is <code>{{ processId.value }}</code>, please copy this number and use it to retrieve the result later!</p>
+        <div v-if="processId.length > 0" class="fixed bottom-0 left-0 w-full py-2.5 bg-purple-600 text-white text-center">
+            <p class="font-bold">Your process ID is {{ processId.value }}, please copy this number and use it to retrieve the result later!</p>
         </div>
     </div>
 </template>
