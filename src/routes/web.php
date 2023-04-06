@@ -19,3 +19,5 @@ Route::get('/process/{process}/download', function (Process $process) {
         'Content-Disposition' => 'attachment; filename="' . $filename . '"',
     ]);
 });
+
+URL::forceScheme('https');

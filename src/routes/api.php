@@ -10,3 +10,5 @@ Route::get('/process/{process}', function (Process $process) {
     
     return $process;
 });
+
+URL::forceScheme('https');

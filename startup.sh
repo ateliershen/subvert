@@ -14,6 +14,7 @@ if [ -z "$MEMORY_LIMIT" ]; then
 fi
 
 echo "OPENAI_API_KEY=$OPENAI_API_KEY" >> .env
+echo "FORCE_HTTPS=true" >> .env
 
 echo "memory_limit = $MEMORY_LIMIT" >> /usr/local/etc/php/php.ini
 echo "upload_max_filesize = $UPLOAD_MAX_FILESIZE" >> /usr/local/etc/php/php.ini
