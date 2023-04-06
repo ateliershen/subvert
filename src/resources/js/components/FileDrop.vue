@@ -1,21 +1,21 @@
 <template>
     <div>
         <div v-if="!started" :class="classes" @dragover="dragover" @dragleave="dragleave" @drop="drop">
-            <input type="file" name="fileHandler" id="fileHandler" class="w-px h-px opacity-0 overflow-hidden absolute" ref="file" @change="onChange" accept=".mp4, .mov, .m4a" />
+            <input type="file" name="fileHandler" id="fileHandler" class="absolute w-px h-px overflow-hidden opacity-0" ref="file" @change="onChange" accept=".mp4, .mov, .m4a" />
             <label v-if="!video" for="fileHandler" class="block cursor-pointer">
-                <p class="text-center text-gray-500 text-lg">Drag + drop a file here or <span class="underline hover:text-gray-800">click to choose</span>.</p>
+                <p class="text-lg text-center text-gray-500">Drag + drop a file here or <span class="underline hover:text-gray-800">click to choose</span>.</p>
             </label>
             <div v-else>
-                <p class="text-center text-gray-500 text-lg">You chose <span class="font-bold">{{ video.name }}</span>. Select your options then press start.</p>
+                <p class="text-lg text-center text-gray-500">You chose <span class="font-bold">{{ video.name }}</span>. Select your options then press start.</p>
                 <button :class="buttonStyles.active">Subtitles</button>
                 <button :class="options.chapters ? buttonStyles.active : buttonStyles.inactive" @click="options.chapters = !options.chapters">Chapters</button>
                 <button :class="options.summary ? buttonStyles.active : buttonStyles.inactive" @click="options.summary = !options.summary">Summary</button>
                 <div>
-                    <select v-model="options.language" class="mt-4 bg-white border border-gray-300 text-gray-500 font-medium py-2 px-4 rounded mx-2">
+                    <select v-model="options.language" class="px-4 py-2 mx-2 mt-4 font-medium text-gray-500 bg-white border border-gray-300 rounded">
                         <option value="default">Video Language</option>
                         <option v-for="language in languages" :value="language" :key="language">{{ language }}</option>
                     </select>
-                    <select v-if="options.chapters" v-model="options.chapters_amount" class="mt-4 bg-white border border-gray-300 text-gray-500 font-medium py-2 px-4 rounded mx-2">
+                    <select v-if="options.chapters" v-model="options.chapters_amount" class="px-4 py-2 mx-2 mt-4 font-medium text-gray-500 bg-white border border-gray-300 rounded">
                         <option :value="n" v-for="n in 20">{{ n }} Chapter{{ n !== 1 ? 's' : '' }}</option>
                     </select>
                     <button class="mt-4 bg-purple-500 border border-purple-500 text-white font-medium py-1.5 px-4 rounded mx-2" @click="start">Start</button>
@@ -25,10 +25,13 @@
         <div v-else>
             <Stepper :step="step" :message="message" />
         </div>
-        <div v-if="started && step === 98" class="text-center mt-8">
-            <a :href="'/process/' + processId" class="inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded">
+        <div v-if="started && step === 98" class="mt-8 text-center">
+            <a :href="'/process/' + processId" class="inline-block px-4 py-2 font-semibold text-white bg-purple-500 rounded hover:bg-purple-600">
                 View + Download Items
             </a>
+        </div>
+        <div v-if="processId.value" class="fixed bottom-0 w-full py-2.5 bg-purple text-white text-center">
+            <p class="font-bold">Your process ID is <code>{{ processId.value }}</code>, please copy this number and use it to retrieve the result later!</p>
         </div>
     </div>
 </template>

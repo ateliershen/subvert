@@ -13,8 +13,8 @@
         </div>
     </div>
     @yield('content')
-    <footer class="mt-12 mb-8 text-center sapce-y-6">
-        <div class="p-4 border border-gray-200 rounded">
+    <footer class="mt-12 mb-8 text-center">
+        <div class="max-w-2xl p-4 mx-auto mb-12 text-left border border-gray-200 rounded">
             <h3 class="mb-4 text-lg font-bold">How to use?</h3>
             <ul class="pl-4 list-disc list-outside">
                 <li>You can upload audio and video files to this server, and we will transcribe it for you.</li>
