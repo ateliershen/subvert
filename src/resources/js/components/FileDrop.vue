@@ -30,8 +30,8 @@
                 View + Download Items
             </a>
         </div>
-        <div v-if="displayID" class="fixed bottom-0 left-0 w-full py-2.5 bg-purple-600 text-white text-center">
-            <p class="font-bold">Your process ID is {{ displayID }}, please copy this number and use it to retrieve the result later!</p>
+        <div v-if="processId" class="fixed bottom-0 left-0 w-full py-2.5 bg-purple-600 text-white text-center">
+            <p class="font-bold">Your process ID is {{ processId }}, please copy this number and use it to retrieve the result later!</p>
         </div>
     </div>
 </template>
@@ -39,8 +39,6 @@
 import { ref, reactive } from 'vue'
 import Stepper from './Stepper.vue'
 import axios from 'axios'
-
-let displayID = ""
 
 const file = ref(null)
 const video = ref(null)
