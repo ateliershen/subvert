@@ -13,7 +13,16 @@
         </div>
     </div>
     @yield('content')
-    <footer class="mt-12 mb-8 text-center">
-        <p class="text-sm text-gray-500">Build with love by @ateliershen</p>
+    <footer class="mt-12 mb-8 text-center sapce-y-6">
+        <div class="p-4 border border-gray-200 rounded">
+            <h3 class="mb-4 text-lg font-bold">How to use?</h3>
+            <ul class="pl-4 list-disc list-outside">
+                <li>You can upload audio and video files to this server, and we will transcribe it for you.</li>
+                <li>However, you will get the result much faster When your file is smaller.</li>
+                <li>It's still in beta, please expect errors form time to time (and let us know!)</li>
+                <li>Most importantly, let us know how to make this tool more helpful :-)</li>
+            </ul>
+        </div>
+        <p class="text-sm text-gray-500">Build with love by @ateliershen. Any feedback? Let's talk: shenwc@sph.com.sg</p>
     </footer>
 </body>
