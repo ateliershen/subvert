@@ -110,7 +110,6 @@ const start = () => {
             'Content-Type': 'multipart/form-data'
         }
     }).then((response) => {
-        this.displayID = response.data.id
         processId.value = response.data.id
         intervalId.value = setInterval(poll, 3000)
         console.log(response)
