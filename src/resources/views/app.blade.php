@@ -14,16 +14,16 @@
     </div>
     @yield('content')
     <footer class="mt-12 mb-8 text-center">
-        <div class="max-w-2xl p-4 mx-auto mb-6 text-left border border-gray-200 rounded">
+        <div class="max-w-4xl p-4 mx-auto mb-6 text-left border border-gray-200 rounded">
             <h3 class="mb-4 text-lg font-bold">How to use?</h3>
             <ul class="pl-4 list-disc list-outside">
                 <li>You can upload audio and video files to this server, and we will transcribe it for you.</li>
-                <li>However, you will get the result faster when the file is smaller.</li>=
+                <li>However, you will get the result faster when the file is smaller.</li>
                 <li>It's still in beta, please expect errors form time to time (and let us know!)</li>
-                <li>Most importantly, let us know how to make this tool more helpful :-)</li>
+                <li>Most importantly, let us know how to make this tool more helpful 😄</li>
             </ul>
         </div>
-        <div class="max-w-2xl p-4 mx-auto mb-12 text-left border border-gray-200 rounded">
+        <div class="max-w-4xl p-4 mx-auto mb-12 text-left border border-gray-200 rounded">
             <h3 class="mb-4 text-lg font-bold">If you get stuck on this page...</h3>
             <ul class="pl-4 list-disc list-outside">
                 <li>Most likely because your file is too big. We are running on a small server so sometimes it got choked.</li>
