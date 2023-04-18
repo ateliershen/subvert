@@ -4,6 +4,7 @@
             <input type="file" name="fileHandler" id="fileHandler" class="absolute w-px h-px overflow-hidden opacity-0" ref="file" @change="onChange" accept=".mp4, .mov, .m4a" />
             <label v-if="!video" for="fileHandler" class="block cursor-pointer">
                 <p class="text-lg text-center text-gray-500">Drag + drop a file here or <span class="underline hover:text-gray-800">click to choose</span>.</p>
+                <p class="text-lg text-center text-gray-500">Note: the file has to be less than 20 mins, yeah a bit useless I know. We are working on this.</p>
             </label>
             <div v-else>
                 <p class="text-lg text-center text-gray-500">You chose <span class="font-bold">{{ video.name }}</span>. Select your options then press start.</p>

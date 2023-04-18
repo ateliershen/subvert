@@ -18,7 +18,7 @@
             <h3 class="mb-4 text-lg font-bold">How to use?</h3>
             <ul class="pl-4 list-disc list-outside">
                 <li>You can upload audio and video files to this server, and we will transcribe it for you.</li>
-                <li>However, you will get the result faster when the file is smaller.</li>
+                <li>However, please make sure the file is less than 20 mins for now, we are working on extending this.</li>
                 <li>It's still in beta, please expect errors form time to time (and let us know!)</li>
                 <li>Most importantly, let us know how to make this tool more helpful 😄</li>
             </ul>
