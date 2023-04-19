@@ -19,8 +19,8 @@ class ExtractAudio
             $ffmpeg = FFMpeg::create();
             $video = $ffmpeg->open(storage_path("app/{$process->file}"));
 
-            $format = new Audio\Mp3();
-            $video->save($format, storage_path("app/audio/{$process->id}.mp3"));
+            $format = new Audio\Aac();
+            $video->save($format, storage_path("app/audio/{$process->id}.aac"));
         } catch (\Exception $e) {
             $process->update([
                 'status' => Status::ERRORED,
